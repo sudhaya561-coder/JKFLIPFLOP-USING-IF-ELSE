@@ -33,8 +33,15 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
 **Procedure**
+1.Define Inputs/Outputs: Inputs: J (Set), K (Reset), c1k (clock); Outputs: q, qbar (~q).
 
-/* write all the steps invloved */
+2.Initialization: Set q = 0 and qbar = 1 at the start of the simulation.
+
+3.JK Flip-Flop Logic: On posedge c1k, compute q
+
+4.Complementary Output: Update qbar = ~q to maintain complementarity.
+
+5.Testbench: Simulate with combinations of J, K, and c1k to verify JK Flip-Flop functionality.
 
 **PROGRAM**
 
